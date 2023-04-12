@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">DogApp</string>
+
+    <string name="details_barking">barking: %1$s/5</string>
+    <string name="details_drooling">drooling: %1$s/5</string>
+    <string name="details_playfulness">playfulness: %1$s/5</string>
+    <string name="details_protectiveness">protectiveness: %1$s/5</string>
+</resources>
