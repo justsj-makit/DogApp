@@ -6,4 +6,5 @@
     <string name="details_playfulness">playfulness: %1$s/5</string>
     <string name="details_protectiveness">protectiveness: %1$s/5</string>
     <string name="dog_description">These dogs are furry little goofballs. They have a knack for getting into mischief and stealing your heart at the same time. They have wet noses, waggy tails, and love to sniff anything and everything. Plus, they\'re the only ones who can get away with begging for treats without any shame. Woof!</string>
+    <string name="internet_error">This app requires access to the internet, please enable wifi or data and relaunch the app</string>
 </resources>
