@@ -16,17 +16,20 @@ class DogListViewModel: ViewModel() {
     private val _onDogListLoadedLiveData = MutableLiveData<List<DogModel>?>()
     val onDogListLoadedLiveData: LiveData<List<DogModel>?> = _onDogListLoadedLiveData
 
-    fun loadDogs() {
+    private val _showLoaderLiveData = MutableLiveData<Boolean>()
+    val showLoaderLiveData: LiveData<Boolean> = _showLoaderLiveData
 
-
-        viewModelScope.launch {
-            val list = dogRepository.getDogList()
-            Timber.e("<<< got the list! ${list}")
-            _onDogListLoadedLiveData.postValue(list)
+    fun setupView() {
+        if (onDogListLoadedLiveData.value == null) {
+            loadDogs()
         }
     }
 
-    fun onDogListSet() {
-        _onDogListLoadedLiveData.value = null
+    private fun loadDogs() {
+        _showLoaderLiveData.value = true
+        viewModelScope.launch {
+            _onDogListLoadedLiveData.postValue(dogRepository.getDogList())
+        }
     }
+
 }

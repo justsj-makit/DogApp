@@ -26,6 +26,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
+            android:textSize="20sp"
             android:text="@{uiModel.name}"
             app:layout_constraintTop_toBottomOf="@id/dog_iv" />
 
@@ -33,7 +34,8 @@
             android:id="@+id/playfulness_tv"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="30dp"
+            android:textSize="16sp"
             android:text="@{@string/details_playfulness(uiModel.playfulness)}"
             app:layout_constraintTop_toBottomOf="@id/name_tv" />
 
@@ -41,6 +43,8 @@
             android:id="@+id/protectiveness_tv"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textSize="16sp"
             android:text="@{@string/details_protectiveness(uiModel.protectiveness)}"
             app:layout_constraintTop_toBottomOf="@id/playfulness_tv" />
 
@@ -48,6 +52,8 @@
             android:id="@+id/barking_tv"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textSize="16sp"
             android:text="@{@string/details_barking(uiModel.barking)}"
             app:layout_constraintTop_toBottomOf="@id/protectiveness_tv" />
 
@@ -55,8 +61,19 @@
             android:id="@+id/drooling_tv"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textSize="16sp"
             android:text="@{@string/details_drooling(uiModel.drooling)}"
             app:layout_constraintTop_toBottomOf="@id/barking_tv" />
+
+        <TextView
+            android:id="@+id/description_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textSize="16sp"
+            android:text="@string/dog_description"
+            app:layout_constraintTop_toBottomOf="@id/drooling_tv"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
